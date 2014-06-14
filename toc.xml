@@ -1,0 +1,5 @@
+<Addon Author="" Name="VikingSprintMeter" APIVersion="8" Version="" Description="">
+    <Script Name="VikingSprintMeter.lua"/>
+    <Form Name="VikingSprintMeter.xml"/>
+    <ReplaceAddon Name="SprintMeter"/>
+</Addon>
