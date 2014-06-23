@@ -21,7 +21,9 @@ end
 
 function VikingSprintMeter:OnLoad()
 	self.xmlDoc = XmlDoc.CreateFromFile("VikingSprintMeter.xml")
-	self.xmlDoc:RegisterCallback("OnDocumentReady", self) 
+	self.xmlDoc:RegisterCallback("OnDocumentReady", self)
+
+	Apollo.LoadSprites("VikingSprintMeterSprites.xml")
 end
 
 function VikingSprintMeter:OnDocumentReady()
@@ -30,7 +32,7 @@ function VikingSprintMeter:OnDocumentReady()
 	end
 	Apollo.RegisterTimerHandler("SprintMeterGracePeriod", "OnSprintMeterGracePeriod", self)
 	Apollo.RegisterEventHandler("VarChange_FrameCount", "OnFrame", self)
-	Apollo.RegisterEventHandler("Tutorial_RequestUIAnchor", 	"OnTutorial_RequestUIAnchor", self)	
+	Apollo.RegisterEventHandler("Tutorial_RequestUIAnchor", 	"OnTutorial_RequestUIAnchor", self)
 
 	self.wndMain = Apollo.LoadForm(self.xmlDoc, "SprintMeterFormVert", "InWorldHudStratum", self)
 	self.wndMain:Show(false, true)
