@@ -58,7 +58,6 @@ function VikingSprintMeter:OnFrame()
 	self.wndMain:FindChild("ProgBar"):SetProgress(nRunCurr, bWndVisible and nRunMax or 0)
 
 	if self.nLastSprintValue ~= nRunCurr then
-		self.wndMain:FindChild("SprintIcon"):SetSprite(self.nLastSprintValue < nRunCurr and "sprResourceBar_Sprint_RunIconSilver" or "sprResourceBar_Sprint_RunIconSilver")
 		self.nLastSprintValue = nRunCurr
 	end
 
