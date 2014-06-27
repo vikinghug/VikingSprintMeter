@@ -16,14 +16,13 @@ function VikingSprintMeter:new(o)
 end
 
 function VikingSprintMeter:Init()
-	Apollo.RegisterAddon(self)
+  local tDependencies = { "VikingLibrary" }
+  Apollo.RegisterAddon(self, false, "", tDependencies)
 end
 
 function VikingSprintMeter:OnLoad()
 	self.xmlDoc = XmlDoc.CreateFromFile("VikingSprintMeter.xml")
 	self.xmlDoc:RegisterCallback("OnDocumentReady", self)
-
-	Apollo.LoadSprites("VikingSprintMeterSprites.xml")
 end
 
 function VikingSprintMeter:OnDocumentReady()
