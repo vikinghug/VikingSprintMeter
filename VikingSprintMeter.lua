@@ -33,7 +33,7 @@ function VikingSprintMeter:OnDocumentReady()
 	Apollo.RegisterEventHandler("VarChange_FrameCount", "OnFrame", self)
 	Apollo.RegisterEventHandler("Tutorial_RequestUIAnchor", 	"OnTutorial_RequestUIAnchor", self)
 
-	self.wndMain = Apollo.LoadForm(self.xmlDoc, "SprintMeterFormVert", "InWorldHudStratum", self)
+	self.wndMain = Apollo.LoadForm(self.xmlDoc, "SprintMeterFormVert", "FixedHudStratum", self)
 	self.wndMain:Show(false, true)
 	self.xmlDoc = nil
 	--self.wndMain:SetUnit(GameLib.GetPlayerUnit(), 40) -- 1 or 9 are also good
