@@ -24,7 +24,7 @@ end
 function VikingSprintMeter:OnLoad()
 	self.xmlDoc = XmlDoc.CreateFromFile("VikingSprintMeter.xml")
 	self.xmlDoc:RegisterCallback("OnDocumentReady", self)
-	Apollo.RegisterEventHandler("WindowManagementReady"      , "OnWindowManagementReady"      , self)
+  Apollo.RegisterEventHandler("WindowManagementReady"      , "OnWindowManagementReady"      , self)
   Apollo.RegisterEventHandler("WindowManagementUpdate"     , "OnWindowManagementUpdate"     , self)
 end
 
@@ -44,7 +44,7 @@ function VikingSprintMeter:OnDocumentReady()
 	self.nLastSprintValue = 0
 
 	--Settings
-	if VikingLib == nil then
+  if VikingLib == nil then
     VikingLib = Apollo.GetAddon("VikingLibrary")
   end
 
@@ -69,7 +69,7 @@ end
 function VikingSprintMeter:GetDefaults()
   return {
     char = {
-    SprintMeterShow = false
+      SprintMeterShow = false
     }  
   }
 end
